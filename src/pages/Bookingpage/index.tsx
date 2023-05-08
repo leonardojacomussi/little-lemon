@@ -5,7 +5,7 @@ import BookingForm from "../../components/BookingForm";
 import Footer from "../../components/Footer";
 import { updateTimes, initializeTimes } from "../../utils/temp";
 
-const BookingPage = (): JSX.Element => {
+const Bookingpage = (): JSX.Element => {
   const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes());
 
   return (
@@ -17,4 +17,4 @@ const BookingPage = (): JSX.Element => {
   );
 };
 
-export default BookingPage;
+export default Bookingpage;

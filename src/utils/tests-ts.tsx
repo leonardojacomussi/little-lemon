@@ -3,7 +3,6 @@ import { ReactElement } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { render, RenderOptions } from "@testing-library/react";
 
-
 import { ThemeProvider } from "styled-components";
 import theme from "../styles/theme";
 import GlobalStyles from "../styles/global";
@@ -15,7 +14,7 @@ const customRender = (
   { ...renderOptions }: CustomRenderProps = {}
 ) =>
   render(
-    <BrowserRouter basename="/little-lemon">
+    <BrowserRouter basename="/">
       <ThemeProvider theme={theme}>
         <GlobalStyles />
         {ui}
