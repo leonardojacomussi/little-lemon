@@ -18,6 +18,34 @@ export const Container = styled.footer<HTMLAttributes<HTMLElement>>`
     left: 0;
     background-color: ${({ theme }) => theme.colors.primary};
     z-index: -1;
+
+    @media (max-width: 840px) {
+      height: 40rem;
+    };
+
+    @media (max-width: 700px) {
+      height: 90rem;
+    };
+
+    @media (max-width: 337px) {
+      height: 95rem;
+    };
+  };
+
+  @media (max-width: 1120px) {
+    width: 90%;
+  };
+
+  @media (max-width: 840px) {
+    height: 40rem;
+  };
+
+  @media (max-width: 700px) {
+    height: 90rem;
+  };
+
+  @media (max-width: 337px) {
+    height: 95rem;
   };
 `;
 
@@ -27,6 +55,10 @@ export const Content = styled.div<HTMLAttributes<HTMLDivElement>>`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+  };
 `;
 
 export const Copyright = styled.div<HTMLAttributes<HTMLDivElement>>`
@@ -37,6 +69,7 @@ export const Copyright = styled.div<HTMLAttributes<HTMLDivElement>>`
   justify-content: center;
   align-items: center;
   gap: .5rem;
+  text-align: center;
 
   a {
     text-decoration: underline;
@@ -50,6 +83,10 @@ export const Image = styled.img<HTMLAttributes<HTMLImageElement>>`
   object-fit: cover;
   margin-top: 4.8rem;
   border-radius: .5rem;
+
+  @media (max-width: 840px) {
+    display: none;
+  };
 `;
 
 export const Column = styled.div<HTMLAttributes<HTMLDivElement>>`

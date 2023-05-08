@@ -9,6 +9,8 @@ export const Container = styled.div<HTMLAttributes<HTMLDivElement>>`
   align-items: flex-start;
   color: ${({ theme }) => theme.colors.white};
   padding: 2rem 0;
+  margin-top: 14.8rem;
+  gap: 4rem;
 
   ::before {
     content: "";
@@ -20,6 +22,30 @@ export const Container = styled.div<HTMLAttributes<HTMLDivElement>>`
     left: 0;
     z-index: -1;
     margin-top: 14.8rem;
+
+    @media (max-width: 768px) {
+      margin-top: 9rem;
+    };
+
+    @media (max-width: 860px) {
+      height: 40rem;
+    };
+
+    @media (max-width: 840px) {
+      height: 50rem;
+    };
+  };
+
+  @media (max-width: 768px) {
+    margin-top: 9rem;
+  };
+
+  @media (max-width: 840px) {
+    flex-direction: column;
+  };
+
+  @media (max-width: 1120px) {
+    width: 90%;
   };
 `;
 
@@ -31,7 +57,7 @@ export const Content = styled.div<HTMLAttributes<HTMLDivElement>>`
 
   h1 {
     color: ${({ theme }) => theme.colors.secondary};
-    width: fit-content;
+    width: 28rem;
   };
 
   p {
@@ -42,6 +68,11 @@ export const Content = styled.div<HTMLAttributes<HTMLDivElement>>`
   button {
     width: fit-content;
   };
+
+  @media (max-width: 840px) {
+    align-items: center;
+    text-align: center;
+  };
 `;
 
 export const Image = styled.div<HTMLAttributes<HTMLDivElement>>`
@@ -50,5 +81,16 @@ export const Image = styled.div<HTMLAttributes<HTMLDivElement>>`
     width: 33rem;
     height: 36.8rem;
     border-radius: ${({ theme }) => theme.border.radius};
+  };
+
+  @media (max-width: 840px) {
+    margin: 0 auto;
+
+    img {
+      width: auto;
+      height: auto;
+      max-width: 33rem;
+      max-height: 36.8rem;
+    };
   };
 `;

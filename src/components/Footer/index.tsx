@@ -1,4 +1,5 @@
 import { FC, HTMLAttributes } from "react";
+import { HashLink } from "react-router-hash-link";
 import { Container, Content, Copyright, Column, Image } from "./styles";
 import restaurant from "../../../public/assets/restaurant.jpg";
 
@@ -10,11 +11,11 @@ const Footer: FC<HTMLAttributes<HTMLElement>> = (props): JSX.Element => {
         <Column>
           <h4>Little<br />Lemon</h4>
           <ul>
-            <li> <a href="#">Home</a> </li>
-            <li> <a href="#">Menu</a> </li>
-            <li> <a href="#">Reservations</a> </li>
-            <li> <a href="#">Order Online</a> </li>
-            <li> <a href="#">Login</a> </li>
+            <li> <HashLink to="/">Home</HashLink> </li>
+            <li> <HashLink to="/#">Menu</HashLink> </li>
+            <li> <HashLink to="/bookings">Reservations</HashLink> </li>
+            <li> <HashLink to="/#">Order Online</HashLink> </li>
+            <li> <HashLink to="/#">Login</HashLink> </li>
           </ul>
         </Column>
         <Column>
@@ -29,7 +30,7 @@ const Footer: FC<HTMLAttributes<HTMLElement>> = (props): JSX.Element => {
                 USA
               </address>
             </li>
-            <li> <a href="tel:+551199999999" target="_blank" rel="external">+55 (11) 9999-9999</a> </li>
+            <li> <a href="tel:+551199999999" target="_blank" rel="external">+55 11 9999-9999</a> </li>
             <li> <a href="mailto:contact@littlelemon.com" target="_blank" rel="external">contact@littlelemon.com</a> </li>
           </ul>
         </Column>

@@ -1,21 +1,40 @@
-import { FC, HTMLAttributes } from "react";
-import { Container } from "./styles";
-import logoImg from "../../../public/assets/Logo.svg";
+import { useState, useRef, useEffect, FC, HTMLAttributes, MutableRefObject } from "react";
+import { Container, Content } from "./styles";
+import Nav from "../Nav";
+import MobileNav from "../MobileNav";
 
 const Header: FC<HTMLAttributes<HTMLElement>> = (props): JSX.Element => {
+  const headerRef: MutableRefObject<HTMLElement | null> = useRef(null);
+  const [_, setLastScrollPosition] = useState(window.pageYOffset || document.documentElement.scrollTop);
+
+  const handleScroll = () => {
+    const header = headerRef.current;
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+    setLastScrollPosition((prevState) => {
+      if (!header) return scrollPosition > 0 ? scrollPosition : 0;
+
+      if (scrollPosition > prevState) {
+        header.style.transform = "translateY(-200px)";
+      } else {
+        header.style.transform = "translateY(0)";
+      };
+      return scrollPosition > 0 ? scrollPosition : 0;
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <Container {...props}>
-      <nav>
-        <ul>
-          <li> <img src={logoImg} alt="Little Lemon Logo" /> </li>
-          <li> <a href="/">Home</a> </li>
-          <li> <a href="#">About</a> </li>
-          <li> <a href="#">Menu</a> </li>
-          <li> <a href="#">Reservations</a> </li>
-          <li> <a href="#">Order Online</a> </li>
-          <li> <a href="#">Login</a> </li>
-        </ul>
-      </nav>
+    <Container {...props} ref={headerRef}>
+      <Content>
+        <Nav />
+        <MobileNav />
+      </Content>
     </Container>
   );
 };

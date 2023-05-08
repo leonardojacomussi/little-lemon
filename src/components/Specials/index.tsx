@@ -1,14 +1,14 @@
 import { FC, HTMLAttributes } from "react";
 import { Container, Top, Cards } from "./styles";
-import Button from "../../../../components/Button";
-import SpecialFoodCard from "../../../../components/SpecialFoodCard";
-import greekSalad from "../../../../../public/assets/greekSalad.jpg";
-import bruchetta from "../../../../../public/assets/bruchetta.svg";
-import lemonDessert from "../../../../../public/assets/lemonDessert.jpg";
+import Button from "../Button";
+import SpecialFoodCard from "../SpecialFoodCard";
+import greekSalad from "../../../public/assets/greekSalad.jpg";
+import bruchetta from "../../../public/assets/bruchetta.svg";
+import lemonDessert from "../../../public/assets/lemonDessert.jpg";
 
-const Highlights: FC<HTMLAttributes<HTMLElement>> = (props): JSX.Element => {
+const Specials: FC<HTMLAttributes<HTMLDivElement>> = (props): JSX.Element => {
   return (
-    <Container {...props}>
+    <Container {...props} id="menu">
       <Top>
         <h1>This weeks specials!</h1>
         <Button>Online Menu</Button>
@@ -37,4 +37,4 @@ const Highlights: FC<HTMLAttributes<HTMLElement>> = (props): JSX.Element => {
   );
 };
 
-export default Highlights;
+export default Specials;

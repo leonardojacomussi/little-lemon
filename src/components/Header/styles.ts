@@ -2,24 +2,33 @@ import styled from "styled-components";
 import { HTMLAttributes } from "react";
 
 export const Container = styled.header<HTMLAttributes<HTMLElement>>`
-  width: 66%;
+  width: 100%;
   height: 12.8rem;
-  /* position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform .3s ease-in-out;
+  position: fixed;
   top: 0;
-  left: 0;
-  padding: 0 7rem; */
+  align-self: center;
+  background-color: ${({ theme }) => theme.colors.white};
+  padding: 0 7rem;
+  z-index: 10;
 
-  > nav {
-    width: 100%;
-    height: 100%;
+  @media (max-width: 768px) {
+    height: 8rem;
+    padding: 0 3rem;
+  };
+`;
 
-    ul {
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      list-style: none;
-      font-weight: ${({ theme }) => theme.font.weight.bold};
-    };
+export const Content = styled.div<HTMLAttributes<HTMLDivElement>>`
+  width: 66%;
+
+  @media (max-width: 1120px) {
+    width: 90%;
+  };
+
+  @media (max-width: 768px) {
+    height: 9rem;
   };
 `;
