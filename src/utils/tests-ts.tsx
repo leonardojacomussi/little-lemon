@@ -15,7 +15,7 @@ const customRender = (
   { ...renderOptions }: CustomRenderProps = {}
 ) =>
   render(
-    <BrowserRouter basename="/">
+    <BrowserRouter basename="/little-lemon">
       <ThemeProvider theme={theme}>
         <GlobalStyles />
         {ui}
