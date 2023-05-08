@@ -6,6 +6,7 @@
   "homepage": "https://leonardojacomussi.github.io/little-lemon",
   "scripts": {
     "dev": "vite",
+    "start": "vite",
     "test": "jest",
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
