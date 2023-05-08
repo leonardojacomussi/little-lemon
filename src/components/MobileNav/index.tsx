@@ -1,10 +1,10 @@
 import { useState, FC, HTMLAttributes } from "react";
 import { HashLink } from "react-router-hash-link";
 import { Container, Menu } from "./styles";
-import logoImg from "../../../public/assets/Logo.svg";
-import menuImg from "../../../public/assets/icon _hamburger_menu.svg";
-import basketImg from "../../../public/assets/basket.svg";
-import closeImg from "../../../public/assets/close.svg";
+import logoImg from "../../assets/Logo.svg";
+import menuImg from "../../assets/icon _hamburger_menu.svg";
+import basketImg from "../../assets/basket.svg";
+import closeImg from "../../assets/close.svg";
 
 const MobileNav: FC<HTMLAttributes<HTMLElement>> = (props): JSX.Element => {
   const [menuOpen, setMenuOpen] = useState(false);

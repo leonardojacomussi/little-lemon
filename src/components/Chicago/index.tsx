@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Container, Content, Image } from "./styles";
-import Mario_and_Adrian_A from "../../../public/assets/Mario_and_Adrian_A.jpg";
-import Mario_and_Adrian_B from "../../../public/assets/Mario_and_Adrian_B.jpg";
+import Mario_and_Adrian_A from "../../assets/Mario_and_Adrian_A.jpg";
+import Mario_and_Adrian_B from "../../assets/Mario_and_Adrian_B.jpg";
 
 const Chicago: FC = (): JSX.Element => {
   return (

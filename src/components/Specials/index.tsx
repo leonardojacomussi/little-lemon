@@ -2,9 +2,9 @@ import { FC, HTMLAttributes } from "react";
 import { Container, Top, Cards } from "./styles";
 import Button from "../Button";
 import SpecialFoodCard from "../SpecialFoodCard";
-import greekSalad from "../../../public/assets/greekSalad.jpg";
-import bruchetta from "../../../public/assets/bruchetta.svg";
-import lemonDessert from "../../../public/assets/lemonDessert.jpg";
+import greekSalad from "../../assets/greekSalad.jpg";
+import bruchetta from "../../assets/bruchetta.svg";
+import lemonDessert from "../../assets/lemonDessert.jpg";
 
 const Specials: FC<HTMLAttributes<HTMLDivElement>> = (props): JSX.Element => {
   return (
