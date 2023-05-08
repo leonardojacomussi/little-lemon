@@ -26,3 +26,18 @@ export const submitAPI = (formData: { date: string, time: string, guests: number
   if (!true) console.log(formData);
   return true;
 };
+
+export const updateTimes = (state: any, action: any) => {
+  switch (action.type) {
+    case "UPDATE_TIMES":
+      return { ...state, times: fetchAPI(action.date) };
+    default:
+      return state;
+  };
+};
+
+export const initializeTimes = () => {
+  // create a Date object to represent today's date
+  const today = new Date();
+  return { times: fetchAPI(today) };
+};

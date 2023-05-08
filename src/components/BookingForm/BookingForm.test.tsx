@@ -2,8 +2,7 @@
 import { render, screen } from "../../utils/tests-ts";
 import BookingForm from ".";
 // import userEvent from "@testing-library/user-event";
-import { initializeTimes, updateTimes } from "../../pages/BookingPage";
-import { submitAPI, fetchAPI } from "../../utils/temp";
+import { submitAPI, fetchAPI, initializeTimes, updateTimes  } from "../../utils/temp";
 
 describe("BookingForm", () => {
   test("Renders labels and fields", () => {
