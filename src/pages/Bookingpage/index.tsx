@@ -1,11 +1,11 @@
-import { useReducer } from "react";
+import { useReducer, FC } from "react";
 import { Container } from "./styles";
 import Header from "../../components/Header";
 import BookingForm from "../../components/BookingForm";
 import Footer from "../../components/Footer";
 import { updateTimes, initializeTimes } from "../../utils/temp";
 
-const Bookingpage = (): JSX.Element => {
+const Bookingpage: FC = (): JSX.Element => {
   const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes());
 
   return (
