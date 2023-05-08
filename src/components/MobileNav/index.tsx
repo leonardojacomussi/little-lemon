@@ -17,7 +17,7 @@ const MobileNav: FC<HTMLAttributes<HTMLElement>> = (props): JSX.Element => {
     <Container {...props}>
       <ul>
         <li>
-          <button onClick={handleMenu}>
+          <button aria-label="Open menu" onClick={handleMenu}>
             <img src={menuImg} alt="Open menu" />
           </button>
         </li>
@@ -25,7 +25,7 @@ const MobileNav: FC<HTMLAttributes<HTMLElement>> = (props): JSX.Element => {
       </ul>
 
       <Menu className={menuOpen ? "opened" : ""}>
-        <button onClick={handleMenu}>
+        <button aria-label="Close menu" onClick={handleMenu}>
           <img src={closeImg} alt="Close menu" />
         </button>
         <ul>

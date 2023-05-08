@@ -24,8 +24,10 @@
   },
   "devDependencies": {
     "@jest/environment": "^29.5.0",
+    "@testing-library/dom": "^9.2.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
     "@types/jest": "^29.5.1",
     "@types/mocha": "^10.0.1",
     "@types/react": "^18.0.28",
@@ -50,6 +52,9 @@
     "transform": {
       "^.+\\.(ts|tsx|js|jsx)$": "ts-jest",
       "^.+\\.(svg|jpg|png)$": "<rootDir>/svgTransform.ts"
-    }
+    },
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/utils/browserMocks.ts"
+    ]
   }
 }

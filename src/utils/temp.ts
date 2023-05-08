@@ -22,7 +22,7 @@ export const fetchAPI = (date: Date): Array<string> => {
   return result;
 };
 
-export const submitAPI = (formData: { date: string, time: string, guests: string, occasion: string }): boolean => {
+export const submitAPI = (formData: { date: string, time: string, guests: number, occasion: string }): boolean => {
   if (!true) console.log(formData);
   return true;
 };

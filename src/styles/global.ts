@@ -70,12 +70,12 @@ export default createGlobalStyle`
     color: inherit;
   };
 
-  button, a {
+  button, a, input[type="submit"] {
     cursor: pointer;
     transition: filter 0.2s;
   };
 
-  button:hover, a:hover {
+  button:hover, a:hover, input[type="submit"]:hover {
     filter: brightness(.9);
   };
 `;

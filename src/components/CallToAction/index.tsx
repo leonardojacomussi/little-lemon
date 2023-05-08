@@ -15,7 +15,7 @@ const CallToAction: FC = ():  JSX.Element => {
         <p className="lead-txt">
           We are family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.
         </p>
-        <Button onClick={() => navigate("/bookings")}>Reserve a Table</Button>
+        <Button onClick={() => navigate("/bookings")} aria-label="Go to reservation table page.">Reserve a Table</Button>
       </Content>
       <Image>
         <img src={restaurant_food} alt="Restaurant Food" />

@@ -20,7 +20,7 @@ export const initializeTimes = () => {
   return { times: fetchAPI(today) };
 };
 
-const Bookingpage = (): JSX.Element => {
+const BookingPage = (): JSX.Element => {
   const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes());
 
   return (
@@ -32,4 +32,4 @@ const Bookingpage = (): JSX.Element => {
   );
 };
 
-export default Bookingpage;
+export default BookingPage;
