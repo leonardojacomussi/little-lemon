@@ -7,7 +7,7 @@ import ConfirmationPage from "./pages/ConfirmationPage";
 export default function () {
   return (
     <Routes>
-      <Route element={<Home/>} path="/" index/>
+      <Route element={<Home/>} path="/"/>
       <Route element={<BookingPage/>} path="/bookings"/>
       <Route element={<ConfirmationPage/>} path="/confirmation"/>
     </Routes>
